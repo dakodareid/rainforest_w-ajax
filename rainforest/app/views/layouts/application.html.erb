@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<%= stylesheet_link_tag 'styles.css' %>
+<html>
+<head>
+  <title>Rainforest</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <% if flash[:notice] %>
+    <p id="notice"><%= flash[:notice] %></p>
+  <% end %>
+  <% if flash[:alert] %>
+    <p id="alert"><%= flash[:alert] %></p> 
+  <% end %>
+
+  <div class="top_bar"></div>
+
+<%= yield %>
+
+<div class="underline"></div>
+
+    <p class="userinfo">
+     	<% if current_user %>
+    		Signed in as <%= current_user.name %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
+     	<% else %>
+    		<strong><%= link_to "Log in", new_session_path %></strong> or <strong><%= link_to "Sign up", new_user_path %></strong>
+    	<% end %>
+    </p>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<h1>Products</h1>
+
+<div class="underline"></div>
+
+<h2><%= link_to "Back to Products", products_url %> | <%= link_to "Edit", edit_product_path(@product) %></h2>
+<br /><br />
+<h3><%= @product.name %></h3><br /> <p><%= @product.description %>, <%= @product.price_in_cents %></p>
+<p><%= @product.formatted_price %></p>
+<%= image_tag @product.url %>
+
+<% if current_user %>
+	<h3>Reviews</h3>
+
+	<p>Reviews for <%= @product.name %></p> 
+
+	<% @product.reviews.each do |review| %>
+		<p>
+			<%= review.comment %>
+			<br>
+			<% if review.user != nil %>
+				<em> by <strong><%= review.user.name %></strong></em> 
+				Added on: <%= review.created_at %>
+			<% end %>
+		</p> 
+	<% end %>
+
+
+	<h3>New Review</h3> 
+	
+	<%= form_for([@product, @review]) do |f| %>
+		<% if @review.errors.any? %>
+			<div id="error_explanation">
+				<h2><%= pluralize(@review.errirs.count, "error") %> prohibited this review from being saved: </h2> 
+
+				<ul>
+				<% @review.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li> 
+				<% end %>
+				</ul>
+			</div>
+		<% end %> 
+
+		<div class"field">
+			<%= f.label :comment %><br />
+			<%= f.text_area :comment %>
+		</div>
+		<div>
+			<%= f.submit %>
+		</div>
+		<% end %>
+	
+	<% else %>
+		<p>Please <%= link_to "log in", new_session_path %> to add or see reviews.</p>
+<% end %>
