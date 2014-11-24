@@ -8,6 +8,7 @@ $(document).on('ready page:load', function() {
 		event.preventDefault();
 		var searchValue = $('#search').val();
 
+	//switched from previous script js method to shorter $.ajax method
 		// $.ajax({
 		// 	url: '/products?search=' + searchValue, 
 		// 	type: 'GET',
@@ -16,12 +17,15 @@ $(document).on('ready page:load', function() {
 		// 	$('#products').html(data);
 		// });
 
-		$.get('/products?search=' + searchValue)
-		.done(function(data){
-			console.log(data);
-			$('#products').html(data);
-		});
-		
+	//switched from above to even shorter $.get method
+		// $.get('/products?search=' + searchValue)
+		// .done(function(data){
+		// 	console.log(data);
+		// 	$('#products').html(data);
+		// });
+
+		$.getScript('/products?search=' + searchValue);
+
 	});
 
 });

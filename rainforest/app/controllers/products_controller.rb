@@ -6,8 +6,14 @@ class ProductsController < ApplicationController
       Product.all
     end
 
-    if request.xhr?
-      render @products
+  # for use with $ajax and longer $.get request
+    # if request.xhr?
+    #   render @products
+    # end
+
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 
