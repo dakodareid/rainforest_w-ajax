@@ -3,9 +3,12 @@
 <div class="underline"></div>
 
 <h2><%= link_to "Add a new product", "/products/new" %></h2>
-<% @products.each do |product| %>
 
-	<div><%= image_tag product.url %></div>
-	<h3> <%= link_to product.name, "/products/#{product.id}" %></h3>
-	<p><%= product.description %> - $ <%= product.formatted_price %></p>
+<%= form_tag products_path, method: :get, authentication: false, id: 'search-form' do %>
+	<%= text_field_tag :search, params[:params] %>
+	<%= submit_tag "Search" %>
 <% end %>
+
+<div id="products">
+	<%= render @products %>
+</div>
