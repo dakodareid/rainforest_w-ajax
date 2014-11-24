@@ -1,0 +1,3 @@
+	<div><%= image_tag product.url %></div>
+	<h3> <%= link_to product.name, "/products/#{product.id}" %></h3>
+	<p><%= product.description %> - $ <%= product.formatted_price %></p>
