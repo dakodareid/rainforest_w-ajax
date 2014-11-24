@@ -1,3 +1,2 @@
-$('#products').html("<%= escapte_javascript(render @products %>");
+$('#products').html("<%= escape_javascript(render @products) %>");
 
-// the above can also be written as $('#products').html("<%= j(render @products %>");
