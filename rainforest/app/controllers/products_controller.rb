@@ -6,11 +6,9 @@ class ProductsController < ApplicationController
       Product.order('products.created_at DESC')
     end.page(params[:page])
 
-    # @products = Product.order('products.create_at DESC').page(params[:page])
-
     respond_to do |format|
-      format.html
       format.js
+      format.html
     end
       
   # for use with $ajax and longer $.get request
