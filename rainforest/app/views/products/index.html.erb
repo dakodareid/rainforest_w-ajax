@@ -3,6 +3,7 @@
 <div class="underline"></div>
 
 <h2><%= link_to "Add a new product", "/products/new" %></h2>
+<h3><%= page_entries_info @products %></h3>
 
 <%= form_tag products_path, method: :get, authentication: false, id: 'search-form' do %>
 	<%= text_field_tag :search, params[:params] %>
@@ -12,3 +13,5 @@
 <div id="products">
 	<%= render @products %>
 </div>
+
+<%= paginate @products %>
