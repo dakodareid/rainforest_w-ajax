@@ -15,11 +15,30 @@
     <p id="alert"><%= flash[:alert] %></p> 
   <% end %>
 
-  <div class="top_bar"></div>
+<%= nav_bar :fixed => :top, :brand => "Rainforest" do %>
+    <%= menu_group do %>
+        <%= menu_item "Home", root_path %>
+        <%= menu_item "About Us"  %>
+        <%= menu_item "Contact"  %>
+    <% end %>
+    <% if current_user %>
+        <%= menu_item "Log Out", log_out_path %>
+    <% else %>
+        <%= menu_group :pull => :right do %>
+            <%= menu_item "Sign Up", new_user_path %>
+            <%= menu_item "Log in", new_session_path %>
 
-<%= yield %>
+        <% end %>
+    <% end %>
+<% end %>
 
-<div class="underline"></div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-3"><h2>menu here</h2></div>
+    <div class="col-xs-9"><%= yield %></div>
+  </div>
+</div>
 
     <p class="userinfo">
      	<% if current_user %>
