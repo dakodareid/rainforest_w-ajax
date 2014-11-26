@@ -27,7 +27,7 @@
 
 	<h3>New Review</h3> 
 	
-	<%= form_for([@product, @review]) do |f| %>
+	<%= form_for([@product, @review], :remote => true) do |f| %>
 		<% if @review.errors.any? %>
 			<div id="error_explanation">
 				<h2><%= pluralize(@review.errirs.count, "error") %> prohibited this review from being saved: </h2> 
