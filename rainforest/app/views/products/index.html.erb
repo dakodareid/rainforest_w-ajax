@@ -1,9 +1,9 @@
-<h1>Rainforest Products</h1>
+<!-- <h1 id="main-title-header">Rainforest Products</h1> -->
 
 <div class="underline"></div>
 
 <h3 class="btn-group"><%= link_to "Add a new product", "/products/new" %></h3>
-<h3><%= page_entries_info @products %></h3>
+<p><%= page_entries_info @products %></p>
 
 <%= form_tag products_path, method: :get, authentication: false, id: 'search-form' do %>
 	<%= text_field_tag :search, params[:params] %>
