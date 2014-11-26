@@ -43,7 +43,12 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-3"><h2>menu here</h2></div>
+    <div class="col-xs-3"> 
+      <ul>
+        <li><%= link_to "Add a new product", "/products/new" %></li>
+        <li>Make a baby</li>
+      <ul>
+    </div>
     <div class="col-xs-9"><%= yield %></div>
   </div>
 </div>
