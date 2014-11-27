@@ -1,0 +1,5 @@
+<% @products.each_slice(3) do |slice| %>
+ 	<div class="row">
+		<%= render slice %>
+	</div>
+<% end %>

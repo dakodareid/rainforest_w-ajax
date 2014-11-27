@@ -1,2 +1,2 @@
-$('#products').append('<%= j render(@products) %>');
+$('#products').append('<%= j render(partial: 'products') %>');
 $('.pagination').replaceWith('<%= j paginate(@products) %>');
