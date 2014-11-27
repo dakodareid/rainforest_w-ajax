@@ -15,22 +15,17 @@
     <p id="alert"><%= flash[:alert] %></p> 
   <% end %>
 
-<%= nav_bar :fixed => :top, :brand => "⛈" do %>
-    <%= menu_group do %>
-        <%= menu_item "HOME", root_path %>
-        <%= menu_item "ABOUT US"  %>
-        <%= menu_item "CONTACT"  %>
-    <% end %>
-    <% if current_user %>
-        <%= menu_item "Log Out", session_path("current"), :method => :delete %>
-    <% else %>
-        <%= menu_group :pull => :right do %>
-            <%= menu_item "Sign Up", new_user_path %>
-            <%= menu_item "Log in", new_session_path %>
 
-        <% end %>
-    <% end %>
-<% end %>
+
+
+
+
+
+
+
+
+
+
 
 <div class="top-menu-block">
   <div class="welcome">IT'S ALWAYS <u>WET</u> IN THE</p>

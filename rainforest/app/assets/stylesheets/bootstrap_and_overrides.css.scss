@@ -1,12 +1,9 @@
 /*
-  =require twitter-bootstrap-static/bootstrap
 
   Use Font Awesome icons (default)
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
-  =require twitter-bootstrap-static/fontawesome
   */
 
-@import "twitter/bootstrap/bootstrap";
 
 @font-face {
 	font-family: KOMIKAX_;
@@ -87,7 +84,7 @@ nav.navbar.navbar-default.navbar-fixed-top {
 
 .navbar-default .navbar-nav>li>a {
 	color: white;
-	font-family: 
+	font-family: Montserrat-Regular;
 }
 
 a {
@@ -111,5 +108,3 @@ a.navbar-brand {
 	height: 25px;
 	font-size: 25px;
 }
-
-@import "twitter/bootstrap/responsive";
