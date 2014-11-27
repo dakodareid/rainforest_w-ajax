@@ -1,3 +1,4 @@
+<hr></hr>
 <%= form_for(@product) do |f| %>
 	<% if @product.errors.any? %>
 		<div id="error_explanation">
@@ -10,24 +11,28 @@
 			</ul>
 		</div>
 	<% end %>
-
+	<br />
 	<div class="field">
 		<%= f.label :name %><br />
-		<%= f.text_field :name %>
+		<%= f.text_field :name, :class => 'form-control', :placeholder => 'product name' %>
 	</div>
+	<br />
 	<div class="field">
 		<%= f.label :url %><br />
-		<%= f.text_field :url %>
+		<%= f.text_field :url, :class => 'form-control', :placeholder => 'image name' %>
 	</div>
+	<br />
 	<div class="field">
 		<%= f.label :description %><br />
-		<%= f.text_area :description %> 
+		<%= f.text_area :description, :class => 'form-control', :rows => '3', :placeholder => 'product description' %> 
 	</div>
+	<br />
 	<div class="field">
 		<%= f.label :price_in_cents %><br />
-		<%= f.number_field :price_in_cents %>
+		<%= f.number_field :price_in_cents, :class => 'form-control', :placeholder => '$1/100' %>
 	</div>
-	<div class='actions'>
-		<%= f.submit %>
+	<br />
+	<div class='actions' >
+		<%= f.submit :class => 'btn btn-lg btn-primary btn-block green' %>
 	</div>
 <% end %>
