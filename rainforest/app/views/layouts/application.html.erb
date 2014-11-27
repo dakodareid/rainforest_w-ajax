@@ -5,7 +5,7 @@
   <title>Rainforest</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+ <%= csrf_meta_tags %>
 </head>
 <body>
   <% if flash[:notice] %>
@@ -15,20 +15,57 @@
     <p id="alert"><%= flash[:alert] %></p> 
   <% end %>
 
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
 
-
-
-
-
-
-
-
-
-
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About Us" %></li>
+        <li><%= link_to "Contact" %></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <li>
+          <% if current_user %> Signed in as <%= current_user.name %>.
+        </li>
+        <li> 
+            <%= link_to "Log out", session_path("current"), :method => :delete %>
+        </li>
+          <% else %>
+        <li>
+            <%= link_to "Log in", new_session_path %> 
+        </li>
+        <li>
+            <%= link_to "Sign up", new_user_path %>
+        </li>
+          <% end %>
+        <!-- <li><%= link_to "Log in", new_session_path %></a></li> -->
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
 
 <div class="top-menu-block">
-  <div class="welcome">IT'S ALWAYS <u>WET</u> IN THE</p>
+  <div class="welcome">IT'S ALWAYS <u>HOT</u> IN THE</p>
   </div>
   <div class="main-title">
     <h1 class="main-title">Rainforest</h1>
@@ -38,13 +75,9 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-3"> 
-      <ul>
-        <li><%= link_to "Add a new product", "/products/new" %></li>
-        <li>Make a baby</li>
-      <ul>
-    </div>
-    <div class="col-xs-9"><%= yield %></div>
+    <div class="col-xs-3"></div>
+    <div class="col-xs-6"><%= yield %></div>
+    <div class="col-xs-3"></div>
   </div>
 </div>
 
@@ -55,5 +88,7 @@
     		<strong><%= link_to "Log in", new_session_path %></strong> or <strong><%= link_to "Sign up", new_user_path %></strong>
     	<% end %>
     </p>
+
+
 </body>
 </html>

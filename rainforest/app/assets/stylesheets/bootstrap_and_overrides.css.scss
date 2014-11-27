@@ -1,10 +1,3 @@
-/*
-
-  Use Font Awesome icons (default)
-  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
-  */
-
-
 @font-face {
 	font-family: KOMIKAX_;
 	src: url('/KOMIKAX_.ttf');
@@ -25,11 +18,15 @@
 	src: url('/Entypo.ttf');
 }
 
-
-body { 
-	padding-top: 60px; 
+.container-fluid {
+	background-color: #199454;
+	border-color: #199454;
 }
 
+nav.navbar.navbar-default.navbar-fixed-top {
+	background-color: #199454;
+	border-color: #199454;
+}
 
 .main-title {
 	font-size: 130px;
@@ -55,30 +52,14 @@ p.welcome-title, u {
 		font-family: Montserrat-Regular;
 	font-size: 27px;
 }
-/*#main-title-header {
-	font-family: KOMIKAX_;
-	font-size: 57px;
-	text-align: center;
-	color: #45454B;
-	margin-top: 0px;
-	margin-bottom: 45px;
-}*/
 
-nav.navbar.navbar-default.navbar-fixed-top {
-	/*height: 40px;*/
-	background-color: #199454;
-	border: 0px;
-}
-.navbar-default .navbar-brand {
-	font-family: ostrich-rounded;
-	font-size: 100px;
-	color: white;
-	padding-top: 15px;
+.col-xs-3 {
+	border-right: 1px solid #eeeeee;
+	height: 1000px;
 }
 
 .top-menu-block {
 	height: 290px;
-	margin-top: -60px;
 	background-color: #199454;
 }
 
@@ -98,10 +79,6 @@ a {
 	font-family: Montserrat-Regular;
 }
 
-.col-xs-3 {
-	border-right: 1px solid #eeeeee;
-	height: 1000px;
-}
 
 a.navbar-brand {
 	font-family: Entypo;
