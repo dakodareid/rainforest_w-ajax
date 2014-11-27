@@ -41,13 +41,13 @@ p.welcome-title, u {
 	margin-bottom: 0px;
 	font-family: Montserrat-Regular;
 	font-size: 27px;
-	color: #C4930C;
+	color: #E0E0E0;
 }
 
 .welcome {
 	margin-bottom: 0px;
 	padding-top: 80px;
-	color: #C4930C;
+	color: white;
 	text-align: center;
 	font-family: Montserrat-Regular;
 	font-size: 27px;
@@ -69,6 +69,10 @@ a {
 	text-align: center;
 }
 
+.navbar-default .navbar-nav > li > a:hover {
+	color: #E9B30E;
+}
+
 .nav>li>a {
 	font-size: 15px;
 	font-family: Montserrat-Regular;
@@ -79,7 +83,7 @@ a {
 	font-family: Entypo;
 	height: 25px;
 	font-size: 85px;
-	color: #C4930C;
+	color: #E9B30E;
 }
 
 .nav-link-match {
@@ -90,5 +94,44 @@ a {
 }
 
 .colored-four {
-	color: #C4930C;
+	color: #E9B30E;
+	font-size: 140px;
+
+}
+
+input.btn.btn-lg.btn-primary.btn-block {
+	color: white;
+	background-color: #E9B30E;
+	border-color: #E9B30E;
+	width: 135px;
+	font-family: Montserrat-Regular;
+}
+
+label {
+	color: #686868;
+	font-family: Montserrat-Regular;
+}
+
+h1.basic-header {
+	color: #999999;
+	font-family: Montserrat-Regular;
+}
+
+input.btn.btn-default {
+	color: white;
+	background-color: #999999;
+	border-color: #999999;
+}
+
+
+.fadeInDown {
+	-webkit-animation-name: fadeInDown;
+	animation-name: fadeInDown;
+}
+
+.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
 }

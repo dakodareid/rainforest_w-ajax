@@ -1,3 +1,4 @@
 // alert("Im responding to your request!");
-
-$("#review-list").html("<%= escape_javascript(render(:partial => 'products/reviews')) %>");
+<% unless @review.comment.blank? %>
+	$("#review-list").html("<%= escape_javascript(render(:partial => 'products/reviews')) %>");
+<% end %>

@@ -1,5 +1,6 @@
-<h1>Sign up</h1>
-
+<h1 class="basic-header">SIGN UP</h1>
+<br />
+<br />
 <%= form_for @user do |f| %>
 	<% if @user.errors.any? %>
 		<div class="error_messages">
@@ -27,6 +28,7 @@
 		<%= f.label :password_confirmation %><br />
 		<%= f.password_field :password_confirmation, :class => 'form-control', :placeholder => 'confirm password' %><br />
 	</div>
+	<br />
 	<div class="actions">
 		<%= f.submit :type => 'button', :class => 'btn btn-lg btn-primary btn-block' %>
 	</div>

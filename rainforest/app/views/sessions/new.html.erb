@@ -1,7 +1,8 @@
-<h1>Log in</h1>
+<h1 class="basic-header">LOG IN</h1>
 
 <div class="underline"></div>
-
+<br />
+<br />
 <%= form_tag sessions_path do %>
 	<div class="field">
 		<%= label_tag :email %><br />
@@ -11,6 +12,7 @@
 		<%= label_tag :password %><br />
 		<%= password_field_tag :password, params[:password], :class => 'form-control', :placeholder => 'password'%>
 	</div>
+	<br />
 	<br />
 	<div class"actions"><%= submit_tag "Log in", :class => 'btn btn-lg btn-primary btn-block' %></div>
 <% end %>
