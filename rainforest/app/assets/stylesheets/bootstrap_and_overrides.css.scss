@@ -19,17 +19,17 @@
 }
 
 .container-fluid {
-	background-color: #199454;
-	border-color: #199454;
+	background-color: #3C5D53;
+	border-color: #3C5D53;
 }
 
 nav.navbar.navbar-default.navbar-fixed-top {
-	background-color: #199454;
-	border-color: #199454;
+	background-color: #3C5D53;
+	border-color: #3C5D53;
 }
 
 .main-title {
-	font-size: 130px;
+	font-size: 140px;
 	padding-top: 0px;
 	text-align: center;
 	font-family: ostrich-rounded;
@@ -41,26 +41,21 @@ p.welcome-title, u {
 	margin-bottom: 0px;
 	font-family: Montserrat-Regular;
 	font-size: 27px;
-	color: white;
+	color: #C4930C;
 }
 
 .welcome {
 	margin-bottom: 0px;
 	padding-top: 80px;
-	color: white;
+	color: #C4930C;
 	text-align: center;
-		font-family: Montserrat-Regular;
+	font-family: Montserrat-Regular;
 	font-size: 27px;
-}
-
-.col-xs-3 {
-	border-right: 1px solid #eeeeee;
-	height: 1000px;
 }
 
 .top-menu-block {
 	height: 290px;
-	background-color: #199454;
+	background-color: #3C5D53;
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -80,10 +75,11 @@ a {
 }
 
 
-a.navbar-brand {
+.navbar-default .navbar-brand {
 	font-family: Entypo;
 	height: 25px;
-	font-size: 25px;
+	font-size: 85px;
+	color: #C4930C;
 }
 
 .nav-link-match {
@@ -91,4 +87,8 @@ a.navbar-brand {
 	font-family: Montserrat-Regular;
 	font-size: 15px;
 	padding: 15px;	
+}
+
+.colored-four {
+	color: #C4930C;
 }

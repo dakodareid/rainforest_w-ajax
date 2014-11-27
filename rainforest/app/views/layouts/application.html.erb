@@ -25,7 +25,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Brand</a>
+      <a><%= link_to "⛈", root_path, :class => 'navbar-brand' %></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -72,7 +72,7 @@
   <div class="welcome">IT'S ALWAYS <u>HOT</u> IN THE</p>
   </div>
   <div class="main-title">
-    <h1 class="main-title">Rainforest</h1>
+    <h1 class="main-title">RAIN<strong class="colored-four">4</strong>EST</h1>
   </div>
 </div>
 
@@ -85,13 +85,6 @@
   </div>
 </div>
 
-    <p class="userinfo">
-     	<% if current_user %>
-    		Signed in as <%= current_user.name %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
-     	<% else %>
-    		<strong><%= link_to "Log in", new_session_path %></strong> or <strong><%= link_to "Sign up", new_user_path %></strong>
-    	<% end %>
-    </p>
 
 
 </body>

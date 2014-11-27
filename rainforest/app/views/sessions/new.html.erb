@@ -5,11 +5,12 @@
 <%= form_tag sessions_path do %>
 	<div class="field">
 		<%= label_tag :email %><br />
-		<%= text_field_tag :email, params[:email] %>
+		<%= text_field_tag :email, params[:email], :class => 'form-control', :placeholder => 'email' %>
 	</div>
 	<div class="field">
 		<%= label_tag :password %><br />
-		<%= password_field_tag :password %>
+		<%= password_field_tag :password, params[:password], :class => 'form-control', :placeholder => 'password'%>
 	</div>
-	<div class"actions"><%= submit_tag "Log in" %></div>
+	<br />
+	<div class"actions"><%= submit_tag "Log in", :class => 'btn btn-lg btn-primary btn-block' %></div>
 <% end %>
