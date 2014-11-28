@@ -18,6 +18,11 @@
 	src: url('/Entypo.ttf');
 }
 
+@font-face {
+	font-family: OpenSans-Light;
+	src: url('/OpenSans-Light.ttf');
+}
+
 .container-fluid {
 	background-color: #3C5D53;
 	border-color: #3C5D53;
@@ -134,4 +139,25 @@ input.btn.btn-default {
 	animation-duration: 1s;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
+}
+
+div.thumbnail {
+	border-radius: 5px;
+	border-color: #E6E6E6;
+	/*height: 360px;*/
+}
+
+.page-entries {
+	font-family: OpenSans-Light;
+	color: #999999;
+}
+
+.add-product-headers {
+	color: #999999;
+}
+
+.image-tile-links {
+	font-family: Montserrat-Regular;
+	font-size: 20px;
+	color: #E9B30E;
 }

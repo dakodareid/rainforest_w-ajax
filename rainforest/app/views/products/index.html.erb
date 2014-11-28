@@ -1,9 +1,7 @@
 <!-- <h1 id="main-title-header">Rainforest Products</h1> -->
 
-<div class="underline"></div>
-
-<h3 class="btn-group"><%= link_to "Add a new product", "/products/new" %></h3>
-<p><%= page_entries_info @products %></p>
+<h3 class="add-product-header"><%= link_to "ADD A PRODUCT", new_product_path %></h3>
+<p class="page-entries"><%= page_entries_info @products %></p>
 
 <div id="products">
 	<%= render partial: 'products' %>
