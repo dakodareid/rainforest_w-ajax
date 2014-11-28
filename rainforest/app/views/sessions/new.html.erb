@@ -6,6 +6,7 @@
 		<%= label_tag :email %><br />
 		<%= text_field_tag :email, params[:email], :class => 'form-control', :placeholder => 'email' %>
 	</div>
+	<!-- <paper-input label="Your Name"></paper-input> -->
 	<br />
 	<div class="field">
 		<%= label_tag :password %><br />
@@ -15,3 +16,20 @@
 	<br />
 	<div class"actions"><%= submit_tag "Log in", :class => 'btn btn-lg btn-primary btn-block' %></div>
 <% end %>
+
+
+
+<br />
+<div class="field">
+	<paper-input floatingLabel label="Email Address" >
+
+	</paper-input>
+</div>
+
+<div class="field">
+	<paper-input floatingLabel label="Password" >
+		
+	</paper-input>
+</div>
+<br />
+<paper-button raised>Log in</paper-button>

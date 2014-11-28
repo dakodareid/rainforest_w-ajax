@@ -4,8 +4,8 @@
     <div class="thumbnail">
       <img src="<%= product.url %>" alt="..."> 
       <div class="caption">
-        <a href="product_path(product)" class="image-tile-links"><%= product.name %></a>
-        <p><%= product.description %></p>
+      <p class="card-product-link-headers"> <%= link_to product.name, "/products/#{product.id}" %></h3>
+       <p><%= product.description %></p>
       </div>
     </div>
   </div>

@@ -6,7 +6,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
  <%= csrf_meta_tags %>
- <link rel="import" href="google-map.html">
+ <%= html_import_tag 'application'%>
 </head>
 <body>
   <% if flash[:notice] %>
@@ -26,7 +26,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a><%= link_to "⛈", root_path, :class => 'navbar-brand'  %></a>
+      <a><%= link_to "∞", root_path, :class => 'navbar-brand'  %></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -69,10 +69,10 @@
 
 
 <div class="top-menu-block">
-  <div class="welcome"><u>BUY</u> ONE <u>GET</u> ONE 50% off</p>
+  <div class="welcome"><u class="colored-four">BUY</u> ONE <u class="colored-four">GET</u> ONE 50% off</p>
   </div>
-  <div class="main-title <%= "fadeInDown animated" if params[:action] == "index" and params[:controller] == "products" %>">
-    <h1 class="main-title">RAIN<strong class="colored-four">4</strong>EST</h1>
+  <div class="main-title <%= "flipInX animated" if params[:action] == "index" and params[:controller] == "products" %>">
+    <h1 class="main-title">Chachka's</h1>
   </div>
 </div>
 
