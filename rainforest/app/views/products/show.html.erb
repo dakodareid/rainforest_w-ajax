@@ -1,12 +1,17 @@
-<h1>Products</h1>
+<div class="centered-back">
 
-<div class="underline"></div>
-
-<h2><%= link_to "Back to Products", products_url %> | <%= link_to "Edit", edit_product_path(@product) %></h2>
 <br /><br />
-<h3><%= @product.name %></h3><br /> <p><%= @product.description %>, <%= @product.price_in_cents %></p>
-<p><%= @product.formatted_price %></p>
-<%= image_tag @product.url %>
+
+<div class="centered-product">
+	<%= link_to "Back to Products", products_url, :class => "page-entries" %> | <%= link_to "Edit", edit_product_path(@product), :class => "page-entries" %>
+</div>
+	<h3 class="show-product-header"><%= @product.name %></h3><br /> 
+	<%= image_tag @product.url %>
+	<br />
+	<br />
+	<p><%= @product.description %>, <%= @product.price_in_cents %></p>
+	<p><%= @product.formatted_price %></p>
+</div>
 
 <% if current_user %>
 	<h3>Reviews</h3>

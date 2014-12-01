@@ -6,7 +6,6 @@
 		<%= label_tag :email %><br />
 		<%= text_field_tag :email, params[:email], :class => 'form-control', :placeholder => 'email' %>
 	</div>
-	<!-- <paper-input label="Your Name"></paper-input> -->
 	<br />
 	<div class="field">
 		<%= label_tag :password %><br />
@@ -18,18 +17,51 @@
 <% end %>
 
 
+<form is="ajax-form" id="login" accept-charset="UTF-8" action="/sessions" method="post">
+	<div style="display:none">
+		<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
 
-<br />
-<div class="field">
-	<paper-input floatingLabel label="Email Address" >
-
-	</paper-input>
-</div>
-
-<div class="field">
-	<paper-input floatingLabel label="Password" >
+		<input name="utf8" type="hidden" value="&#x2713;" />
+		<%# binding.pry %>
+		<!-- <paper-input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" /> -->
+	</div>
 		
-	</paper-input>
-</div>
-<br />
-<paper-button raised>Log in</paper-button>
+	<div class="field">
+		<paper-input id="email" name="email" floatingLabel label="Email Address" type="text" />
+	</div>
+	<br />
+	<div class="field">
+		<paper-input id="password" name="password" floatingLabel label="Password" type="password" />
+	</div>
+	<br />
+	<br />
+	<div class"actions">
+		<input id="saveForm" class="btn btn-lg btn-primary btn-block" type="submit" value="Log in" />
+	</div>
+</form>
+
+// <script>
+//     $(document).ready(function() {
+
+//       var form = document.getElementById('login');
+
+//       document.getElementById('login').addEventListener('submit', function(event) {
+//         // Prevent normal form submit
+//         event.preventDefault();
+//       });
+
+//       document.getElementById('saveForm').addEventListener('click', function() {
+//         Array.prototype.forEach.call(form.children, function(child) {
+//           var name = child.getAttribute('name');
+
+//           if ('value' in child && child.type !== 'submit' && name) {
+//             console.log(name, child.value);
+//             // Use jQuery.ajax or a Polymer/core-ajax element to send
+//             // the data to the server
+            
+//           }
+//         });
+//       });
+
+//     });
+// </script>
